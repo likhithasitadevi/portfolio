@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> Likhitha Yelubandi | CSE student who builds</title>
+<meta name="description" content="Portfolio of Likhitha, a third-year CSE student building web apps and AI tools, deployed on AWS Amplify Hosting. Click a skill to see what I built with it, then play Ship It!">
+<meta property="og:title" content="Likhitha | CSE student who builds">
+<meta property="og:description" content="Web apps and AI tools you can try. Deployed on AWS Amplify Hosting.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#ff4f81">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23ffd23f'/%3E%3Ctext x='50' y='72' font-size='64' font-weight='800' text-anchor='middle' font-family='Arial' fill='%231c1b3a'%3EL%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<style>
+:root{--bg:#ecebf8;--grid:#d4d1ee;--ink:#1c1b3a;--muted:#4b4a70;--card:#fff;--pink:#ff4f81;--yellow:#ffd23f;--mint:#5be3b0;
+--head:'Syne','Trebuchet MS',sans-serif;--body:'DM Sans','Segoe UI',Arial,sans-serif}
+:root[data-theme=dark]{--bg:#171636;--grid:#26244d;--ink:#f1efff;--muted:#b4b2dc;--card:#211f4a;--pink:#ff6b97}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#171636;--grid:#26244d;--ink:#f1efff;--muted:#b4b2dc;--card:#211f4a;--pink:#ff6b97}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--body);font-size:18px;line-height:1.65;color:var(--ink);background-color:var(--bg);
+background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:32px 32px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--pink);outline-offset:3px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+nav{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:28px 0}
+nav b{font-family:var(--head);font-size:1.4rem}
+nav .links2{display:flex;align-items:center;flex-wrap:wrap;gap:6px 24px}
+nav a{font-weight:500;text-decoration:none;border-bottom:2px solid transparent}
+nav a:hover{border-color:var(--pink)}
+.theme{font:700 .9rem var(--body);padding:7px 16px;border:2px solid var(--ink);border-radius:99px;background:var(--yellow);color:#1c1b3a;cursor:pointer;box-shadow:3px 3px 0 var(--ink)}
+.theme:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+.hero{padding:72px 0 56px}
+.hero h1{font-family:var(--head);font-weight:800;font-size:clamp(3.2rem,12vw,9.5rem);line-height:.92;margin:0 0 28px;letter-spacing:-.03em}
+.hero h1 span{display:inline-block;background:var(--yellow);color:#1c1b3a;padding:0 .12em;transform:rotate(-2deg)}
+.lede{font-size:1.3rem;max-width:48ch;margin:0 0 48px}
+.picker{background:var(--card);border:3px solid var(--ink);border-radius:16px;box-shadow:8px 8px 0 var(--ink);padding:32px 36px}
+.picker h2{font-family:var(--head);font-size:1.6rem;margin:0 0 4px}
+.picker p{margin:0 0 20px;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 20px}
+.chip{font:500 1.05rem var(--body);padding:10px 20px;border:2px solid var(--ink);border-radius:99px;background:var(--bg);color:var(--ink);cursor:pointer}
+.chip[aria-pressed=true]{background:var(--pink);color:#1c1b3a;box-shadow:3px 3px 0 var(--ink)}
+.chip.gap{border-style:dashed}
+.status{min-height:1.6em;font-weight:500;margin:0}
+section{padding:96px 0 16px}
+h2.sec{line-height:1.15;font-family:var(--head);font-size:clamp(2rem,6vw,2.8rem);margin:0 0 36px;letter-spacing:-.01em}
+.projects{display:grid;gap:32px;grid-template-columns:repeat(2,minmax(0,1fr))}
+.project{background:var(--card);border:3px solid var(--ink);border-radius:16px;padding:30px;box-shadow:6px 6px 0 var(--ink);display:flex;flex-direction:column;transition:opacity .2s,transform .2s}
+.project.big{grid-column:1/-1;padding:36px}
+.project.big p{max-width:80ch}
+.project.dim{opacity:.35}
+.project.hit{background:var(--mint);color:#1c1b3a;transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--ink)}
+.project.hit p{color:#1c1b3a}
+.project h3{font-family:var(--head);font-size:1.6rem;margin:0 0 10px}
+.project p{margin:0 0 16px;color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:auto 0 16px}
+.tags li{font-size:.85rem;font-weight:500;border:2px solid currentColor;border-radius:6px;padding:1px 10px}
+.links a{font-weight:700;margin-right:22px}
+.project p.fine{font-size:.85rem;margin:12px 0 0}
+.about{display:grid;grid-template-columns:1.5fr 1fr;gap:56px;align-items:start}
+.about p{margin:0 0 16px;max-width:62ch}
+.note{background:var(--yellow);color:#1c1b3a;border:3px solid var(--ink);border-radius:16px;padding:24px 26px;transform:rotate(1.5deg);box-shadow:5px 5px 0 var(--ink)}
+.note b{font-family:var(--head);display:block;margin-bottom:6px;font-size:1.15rem}
+.btns{display:flex;gap:16px;flex-wrap:wrap;margin-top:22px}
+.btn{font-weight:700;text-decoration:none;padding:14px 26px;border:3px solid var(--ink);border-radius:12px;background:var(--card);box-shadow:4px 4px 0 var(--ink)}
+.btn.main{background:var(--pink);color:#1c1b3a}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+.btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+button.btn{font:700 1rem var(--body);cursor:pointer;color:var(--ink)}
+button.btn.main{color:#1c1b3a}
+
+/* ---------- Game ---------- */
+.game{background:var(--card);border:3px solid var(--ink);border-radius:16px;box-shadow:8px 8px 0 var(--ink);padding:28px 32px 32px}
+.game .intro{margin:0 0 20px;color:var(--muted);max-width:70ch}
+.hud{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:0 0 16px}
+.pill{font:700 1rem var(--head);border:3px solid var(--ink);border-radius:10px;padding:6px 16px;background:var(--bg);box-shadow:3px 3px 0 var(--ink);min-width:110px;text-align:center}
+.pill.s{background:var(--mint);color:#1c1b3a}
+.pill.l{background:var(--pink);color:#1c1b3a}
+.pill.b{background:var(--yellow);color:#1c1b3a}
+.hud .spacer{flex:1}
+.stage{position:relative;border:3px solid var(--ink);border-radius:12px;overflow:hidden;background:var(--bg);aspect-ratio:16/8;min-height:300px;max-height:640px;width:100%}
+.stage canvas{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:none;cursor:ew-resize}
+.stage canvas:focus-visible{outline-offset:-6px}
+.legend{display:flex;gap:10px 26px;flex-wrap:wrap;margin:18px 0 0;font-size:.95rem;color:var(--muted)}
+.legend span b{font-size:1.15rem;margin-right:6px}
+.gstatus{margin:14px 0 0;font-weight:500;min-height:1.6em}
+
+h3.sub{font-family:var(--head);font-size:1.6rem;margin:46px 0 18px}
+
+.arch{background:var(--card);border:3px solid var(--ink);border-radius:16px;box-shadow:8px 8px 0 var(--ink);padding:32px 36px}
+.arch p{margin:0 0 20px;color:var(--muted);max-width:66ch}
+.scroll{overflow-x:auto}
+.arch svg{display:block;width:100%;height:auto}.arch .vt{display:none;max-width:320px;margin:0 auto}
+.arch .box{fill:var(--bg);stroke:var(--ink);stroke-width:3}
+.arch .box.aws{fill:var(--mint)}
+.arch .box.user{fill:var(--yellow)}
+.arch text{font-family:var(--head);font-weight:700;font-size:15px;fill:var(--ink)}
+.arch .box.aws+text,.arch .box.user+text{fill:#1c1b3a}
+.arch .sm{font-family:var(--body);font-weight:500;font-size:13px;fill:var(--muted)}
+.arch .line{stroke:var(--ink);stroke-width:3;fill:none}
+.arch marker path{fill:var(--ink)}
+
+footer{padding:80px 0 56px;color:var(--muted);font-size:.95rem}
+@media (max-width:900px){.about{grid-template-columns:1fr;gap:32px}}
+@media (max-width:720px){
+  body{font-size:17px}
+  .wrap{padding:0 18px}
+  .projects{grid-template-columns:1fr}
+  .arch .hz{display:none}.arch .vt{display:block}
+  .picker,.arch{padding:20px}
+  .game{padding:18px}
+  .project,.project.big{padding:22px}
+  .hero{padding:36px 0 36px}
+  section{padding:64px 0 10px}
+  .stage{aspect-ratio:4/5;min-height:0;max-height:none}
+  .pill{min-width:0;flex:1}
+  .hud .spacer{display:none}
+}
+@media (prefers-reduced-motion:reduce){.project{transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav aria-label="Main"><b> Likhitha Yelubandi </b><div class="links2"><a href="#about">About</a><a href="#projects">Projects</a><a href="#game">Game</a><a href="#amplify">Deployment</a><a href="#contact">Contact</a><button class="theme" id="theme" type="button">Dark mode</button></div></nav>
+
+<header class="hero">
+  <h1>I build <span>things</span> that work.</h1>
+  <p class="lede">Hi, I'm Likhitha, a third-year CSE student. I like building apps that solve real problems. Everything below is live, so click around and try it.</p>
+  <div class="picker">
+    <h2>My Tech superpowers</h2>
+    <p>Pick a skill to see which of my projects uses it.</p>
+    <div class="chips" role="group" aria-label="Skills">
+      <button class="chip" aria-pressed="false" data-skill="Python">Python</button>
+      <button class="chip" aria-pressed="false" data-skill="JavaScript">JavaScript</button>
+      <button class="chip" aria-pressed="false" data-skill="React">React</button>
+      <button class="chip" aria-pressed="false" data-skill="REST APIs">REST APIs</button>
+      <button class="chip" aria-pressed="false" data-skill="AI APIs">AI APIs</button>
+      <button class="chip" aria-pressed="false" data-skill="AWS">AWS</button>
+      <button class="chip gap" aria-pressed="false" data-skill="SQL">SQL</button>
+      <button class="chip gap" aria-pressed="false" data-skill="DSA">DSA</button>
+    </div>
+    <p class="status" id="status" aria-live="polite">Solid chips are skills in my projects. Dashed chips are skills I'm practising.</p>
+  </div>
+</header>
+
+<section id="about">
+  <h2 class="sec">About me</h2>
+  <div class="about">
+    <div>
+      <p>I'm a third-year Computer Science Engineering student preparing for campus placements. I practise data structures and algorithms regularly and build projects with Python, SQL and JavaScript. I'm learning AWS and cloud computing, with the goal of earning the AWS Cloud Practitioner certification. This portfolio is my first project deployed on AWS, using Amplify Hosting. I like turning what I learn into products people can open and use.</p>
+      <p>I'm looking for internships and placement opportunities where I can keep building.</p>
+    </div>
+    <div class="note"><b>Next on my list</b>SQL and DSA don't have a project yet. If you have an idea that needs them, tell me.</div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2 class="sec">Projects</h2>
+  <div class="projects">
+    <article class="project big" data-skills="Python,AI APIs,REST APIs">
+      <h3>Career Tool</h3>
+      <p>Choose a target role, tick the skills you already have, and see exactly what is missing. The app uses AI to generate a personalised learning roadmap for your skill gaps, and it scans your resume PDF to suggest improvements. I built it to solve a problem I faced myself while preparing for campus placements.</p>
+      <ul class="tags"><li>Python</li><li>Streamlit</li><li>Groq API</li></ul>
+      <div class="links"><a href="https://career-ls.streamlit.app/">Live app</a><a href="https://github.com/likhithasitadevi/career-tool">GitHub</a></div>
+      <p class="fine">The free host puts the app to sleep when idle. If you see a "wake up" button, click it and wait about 30 seconds.</p>
+    </article>
+    <article class="project" data-skills="JavaScript,REST APIs">
+      <h3>Weather Forecast App</h3>
+      <p>Search a city and get current conditions and the forecast, pulled live from OpenWeatherMap. Deployed on Netlify.</p>
+      <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+      <div class="links"><a href="https://weather-forecast-212.netlify.app/">Live demo</a><a href="https://github.com/likhithasitadevi/weather-forecast-app">GitHub</a></div>
+    </article>
+    <article class="project" data-skills="JavaScript,React">
+      <h3>Expense Tracker Dashboard</h3>
+      <p>A React dashboard with balance, income, expenses, savings, a budget tracker and a transactions panel.</p>
+      <ul class="tags"><li>React</li><li>JSX</li><li>CSS</li></ul>
+      <div class="links"><a href="https://expense-tracker-212.netlify.app/">Live demo</a><a href="https://github.com/likhithasitadevi/expense-tracker">GitHub</a></div>
+    </article>
+  </div>
+</section>
+
+<section id="game">
+  <h2 class="sec">Take a break: Ship It!</h2>
+  <div class="game">
+    <p class="intro">You are the Amplify build server. Catch commits and clouds to ship the release, and dodge the bugs. Move with your mouse or finger, or use the arrow keys (or A and D). Three bugs and the build fails.</p>
+    <div class="hud">
+      <div class="pill s" id="gScore">Score 0</div>
+      <div class="pill l" id="gLives">Lives 3</div>
+      <div class="pill" id="gLevel">Level 1</div>
+      <div class="pill b" id="gBest">Best 0</div>
+      <div class="spacer"></div>
+      <button class="btn main" id="gStart" type="button">Start game</button>
+      <button class="btn" id="gPause" type="button" disabled>Pause</button>
+    </div>
+    <div class="stage" id="stage">
+      <canvas id="cv" tabindex="0" role="application" aria-label="Ship It game. Move the Amplify build server left and right with the arrow keys or by dragging to catch commits and clouds and avoid bugs."></canvas>
+    </div>
+    <div class="legend">
+      <span><b>&lt;/&gt;</b>Commit: +10</span>
+      <span><b>&#9729;&#65039;</b>Cloud: +30</span>
+      <span><b>&#128030;</b>Bug: lose a life</span>
+    </div>
+    <p class="gstatus" id="gStatus" aria-live="polite">Press Start game when you are ready.</p>
+  </div>
+</section>
+
+<section id="amplify">
+  <h2 class="sec">How this site is deployed</h2>
+  <div class="arch">
+    <p>I write the code and push it to GitHub. AWS Amplify Hosting watches the repository, publishes the site over HTTPS and gives it a public link. Each new push is redeployed automatically.</p>
+    <div class="scroll">
+    <svg class="hz" viewBox="0 0 760 115" role="img" aria-label="Deployment flow: my laptop pushes code to GitHub, GitHub triggers AWS Amplify Hosting, which serves the live site to visitors.">
+      <defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z"/></marker></defs>
+      <rect class="box user" x="10" y="20" width="150" height="56" rx="10"/><text x="85" y="54" text-anchor="middle">My laptop</text>
+      <rect class="box" x="200" y="20" width="150" height="56" rx="10"/><text x="275" y="54" text-anchor="middle">GitHub</text>
+      <rect class="box aws" x="390" y="20" width="150" height="56" rx="10"/><text x="465" y="54" text-anchor="middle">Amplify Hosting</text>
+      <rect class="box user" x="580" y="20" width="150" height="56" rx="10"/><text x="655" y="54" text-anchor="middle">Visitor</text>
+      <path class="line" d="M160 48H196" marker-end="url(#ah)"/>
+      <path class="line" d="M350 48H386" marker-end="url(#ah)"/>
+      <path class="line" d="M540 48H576" marker-end="url(#ah)"/>
+      <text class="sm" x="85" y="102" text-anchor="middle">write code</text>
+      <text class="sm" x="275" y="102" text-anchor="middle">stores the code</text>
+      <text class="sm" x="465" y="102" text-anchor="middle">builds and hosts it</text>
+      <text class="sm" x="655" y="102" text-anchor="middle">opens the live link</text>
+    </svg>
+    <svg class="vt" viewBox="0 0 300 350" role="img" aria-label="Deployment flow: my laptop pushes code to GitHub, GitHub triggers AWS Amplify Hosting, which serves the live site to visitors.">
+      <defs><marker id="av" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z"/></marker></defs>
+      <rect class="box user" x="40" y="10" width="220" height="60" rx="10"/><text x="150" y="38" text-anchor="middle">My laptop</text><text class="sm" x="150" y="57" text-anchor="middle" style="fill:#1c1b3a">write code</text>
+      <rect class="box" x="40" y="100" width="220" height="60" rx="10"/><text x="150" y="128" text-anchor="middle">GitHub</text><text class="sm" x="150" y="147" text-anchor="middle">stores the code</text>
+      <rect class="box aws" x="40" y="190" width="220" height="60" rx="10"/><text x="150" y="218" text-anchor="middle">Amplify Hosting</text><text class="sm" x="150" y="237" text-anchor="middle" style="fill:#1c1b3a">builds and hosts it</text>
+      <rect class="box user" x="40" y="280" width="220" height="60" rx="10"/><text x="150" y="308" text-anchor="middle">Visitor</text><text class="sm" x="150" y="327" text-anchor="middle" style="fill:#1c1b3a">opens the live link</text>
+      <path class="line" d="M150 70V96" marker-end="url(#av)"/><path class="line" d="M150 160V186" marker-end="url(#av)"/><path class="line" d="M150 250V276" marker-end="url(#av)"/>
+    </svg>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2 class="sec">Contact</h2>
+  <p>Email me or browse my code on GitHub.</p>
+  <div class="btns">
+    <a class="btn main" href="mailto:likhithasitadevi@gmail.com">Email me</a>
+    <a class="btn" href="https://github.com/likhithasitadevi">GitHub</a>
+    <a class="btn" href="https://www.linkedin.com/in/likhitha-yelubandi-698759374/">LinkedIn</a>
+  </div>
+</section>
+
+<footer>&copy; 2026 Likhitha. Deployed on AWS Amplify Hosting. Built for the AWS Student Builder Challenge.</footer>
+</div>
+<script>
+(function(){
+  /* ---------- Skill picker ---------- */
+  var chips=document.querySelectorAll('.chip'),cards=document.querySelectorAll('.project'),
+      status=document.getElementById('status'),
+      def=status.textContent;
+  chips.forEach(function(c){
+    c.addEventListener('click',function(){
+      var on=c.getAttribute('aria-pressed')==='true';
+      chips.forEach(function(x){x.setAttribute('aria-pressed','false')});
+      if(on){cards.forEach(function(p){p.classList.remove('hit','dim')});status.textContent=def;return}
+      c.setAttribute('aria-pressed','true');
+      var s=c.dataset.skill,n=0;
+      cards.forEach(function(p){
+        var m=p.dataset.skills.split(',').indexOf(s)>-1;
+        p.classList.toggle('hit',m);p.classList.toggle('dim',!m);if(m)n++;
+      });
+      status.textContent=n?s+' is used in '+n+(n>1?' projects':' project')+'. Highlighted below.':s+': no project yet. It is next on my list.';
+      if(n)document.getElementById('projects').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'});
+    });
+  });
+
+  /* ---------- Light / dark theme switcher ---------- */
+  var root=document.documentElement,btn=document.getElementById('theme');
+  function isDark(){return root.dataset.theme?root.dataset.theme==='dark':matchMedia('(prefers-color-scheme:dark)').matches}
+  function sync(){btn.textContent=isDark()?'Light mode':'Dark mode'}
+  btn.addEventListener('click',function(){
+    root.dataset.theme=isDark()?'light':'dark';
+    try{localStorage.setItem('theme',root.dataset.theme)}catch(e){}
+    sync();
+  });
+  sync();
+
+  /* ---------- Game: Ship It! ---------- */
+  var cv=document.getElementById('cv'),ctx=cv.getContext('2d'),stage=document.getElementById('stage');
+  var elScore=document.getElementById('gScore'),elLives=document.getElementById('gLives'),
+      elLevel=document.getElementById('gLevel'),elBest=document.getElementById('gBest'),
+      elStart=document.getElementById('gStart'),elPause=document.getElementById('gPause'),
+      elStatus=document.getElementById('gStatus');
+  var reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  var W=0,H=0,dpr=1;
+  var best=0;
+  try{best=parseInt(localStorage.getItem('shipit-best')||'0',10)||0}catch(e){}
+  elBest.textContent='Best '+best;
+
+  var state='idle'; // idle | running | paused | over
+  var score,lives,level,items,spawnT,px,targetX,keys={},last=0,particles,shake;
+
+  function resize(){
+    dpr=Math.min(window.devicePixelRatio||1,2);
+    var r=stage.getBoundingClientRect();
+    W=Math.max(200,r.width);H=Math.max(200,r.height);
+    cv.width=Math.round(W*dpr);cv.height=Math.round(H*dpr);
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+    if(px===undefined){px=W/2;targetX=W/2}
+    px=Math.min(Math.max(px,pw()/2),W-pw()/2);
+    draw();
+  }
+  function pw(){return Math.max(110,Math.min(190,W*0.17))}
+  function ph(){return Math.max(34,Math.min(48,H*0.09))}
+  function v(n){return getComputedStyle(root).getPropertyValue(n).trim()||'#000'}
+
+  function reset(){
+    score=0;lives=3;level=1;items=[];particles=[];spawnT=0;shake=0;
+    px=W/2;targetX=W/2;updateHud();
+  }
+  function updateHud(){
+    elScore.textContent='Score '+score;
+    elLives.textContent='Lives '+lives;
+    elLevel.textContent='Level '+level;
+  }
+  function rank(s){
+    return s<100?'Intern':s<250?'Junior Dev':s<500?'Cloud Ninja':'Deploy Legend';
+  }
+
+  function start(){
+    reset();state='running';last=performance.now();
+    elStart.textContent='Restart';elPause.disabled=false;elPause.textContent='Pause';
+    elStatus.textContent='Build started. Catch the commits!';
+    cv.focus({preventScroll:true});
+    requestAnimationFrame(loop);
+  }
+  function togglePause(){
+    if(state==='running'){state='paused';elPause.textContent='Resume';elStatus.textContent='Paused.';draw()}
+    else if(state==='paused'){state='running';elPause.textContent='Pause';elStatus.textContent='Back to shipping.';last=performance.now();requestAnimationFrame(loop)}
+  }
+  function gameOver(){
+    state='over';elPause.disabled=true;elPause.textContent='Pause';elStart.textContent='Play again';
+    var nb=score>best;
+    if(nb){best=score;elBest.textContent='Best '+best;try{localStorage.setItem('shipit-best',String(best))}catch(e){}}
+    elStatus.textContent='Build failed. Final score '+score+'. Your rank: '+rank(score)+'.'+(nb&&score>0?' New best score!':'');
+    draw();
+  }
+
+  function spawn(){
+    var r=Math.max(18,Math.min(26,W*0.03));
+    var roll=Math.random(),type='commit';
+    var bugChance=Math.min(0.42,0.24+level*0.02);
+    if(roll<bugChance)type='bug';else if(roll>0.9)type='cloud';
+    items.push({x:r+Math.random()*(W-2*r),y:-r,r:r,type:type,
+      vy:(H*0.3+level*H*0.04)*(0.85+Math.random()*0.4),
+      rot:Math.random()*6,vr:(Math.random()-.5)*3});
+  }
+  function burst(x,y,color){
+    if(reduce)return;
+    for(var i=0;i<12;i++){
+      var a=Math.random()*6.283,s=60+Math.random()*140;
+      particles.push({x:x,y:y,vx:Math.cos(a)*s,vy:Math.sin(a)*s-40,life:.5+Math.random()*.3,t:0,c:color});
+    }
+  }
+
+  function update(dt){
+    // keyboard
+    var sp=W*1.1;
+    if(keys.left)targetX-=sp*dt;
+    if(keys.right)targetX+=sp*dt;
+    var half=pw()/2;
+    targetX=Math.min(Math.max(targetX,half),W-half);
+    px+=(targetX-px)*Math.min(1,dt*18);
+
+    spawnT-=dt;
+    if(spawnT<=0){spawn();spawnT=Math.max(0.28,0.85-level*0.07)*(0.7+Math.random()*0.6)}
+
+    var top=H-ph()-10;
+    for(var i=items.length-1;i>=0;i--){
+      var it=items[i];
+      it.y+=it.vy*dt;it.rot+=it.vr*dt;
+      var hit=it.y+it.r>=top&&it.y-it.r<=H-10&&Math.abs(it.x-px)<half+it.r*0.6;
+      if(hit){
+        if(it.type==='bug'){
+          lives--;shake=.25;burst(it.x,top,v('--pink'));
+          elStatus.textContent='Bug caught! '+lives+(lives===1?' life left.':' lives left.');
+        }else{
+          var pts=it.type==='cloud'?30:10;
+          score+=pts;burst(it.x,top,it.type==='cloud'?v('--yellow'):v('--mint'));
+          var nl=1+Math.floor(score/100);
+          if(nl>level){level=nl;elStatus.textContent='Level '+level+'! Things are speeding up.'}
+        }
+        items.splice(i,1);updateHud();
+        if(lives<=0){gameOver();return}
+      }else if(it.y-it.r>H){items.splice(i,1)}
+    }
+    for(var j=particles.length-1;j>=0;j--){
+      var p=particles[j];p.t+=dt;
+      if(p.t>p.life){particles.splice(j,1);continue}
+      p.vy+=400*dt;p.x+=p.vx*dt;p.y+=p.vy*dt;
+    }
+    if(shake>0)shake-=dt;
+  }
+
+  function rr(x,y,w,h,r){
+    ctx.beginPath();
+    ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath();
+  }
+  function centerText(t,y,size,color){
+    ctx.fillStyle=color;ctx.font='800 '+size+'px Syne, "Trebuchet MS", sans-serif';
+    ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(t,W/2,y);
+  }
+
+  function draw(){
+    var ink=v('--ink'),bg=v('--bg'),grid=v('--grid'),mint=v('--mint'),pink=v('--pink'),yellow=v('--yellow'),muted=v('--muted');
+    ctx.save();
+    ctx.clearRect(0,0,W,H);
+    ctx.fillStyle=bg;ctx.fillRect(0,0,W,H);
+    // grid
+    ctx.strokeStyle=grid;ctx.lineWidth=1;ctx.beginPath();
+    for(var gx=0;gx<W;gx+=32){ctx.moveTo(gx+.5,0);ctx.lineTo(gx+.5,H)}
+    for(var gy=0;gy<H;gy+=32){ctx.moveTo(0,gy+.5);ctx.lineTo(W,gy+.5)}
+    ctx.stroke();
+    if(shake>0&&!reduce)ctx.translate((Math.random()-.5)*8,(Math.random()-.5)*8);
+
+    // items
+    items&&items.forEach(function(it){
+      ctx.save();ctx.translate(it.x,it.y);
+      var col=it.type==='bug'?pink:it.type==='cloud'?yellow:mint;
+      ctx.fillStyle=ink;ctx.beginPath();ctx.arc(3,3,it.r,0,6.283);ctx.fill();
+      ctx.fillStyle=col;ctx.strokeStyle=ink;ctx.lineWidth=3;
+      ctx.beginPath();ctx.arc(0,0,it.r,0,6.283);ctx.fill();ctx.stroke();
+      ctx.fillStyle='#1c1b3a';ctx.textAlign='center';ctx.textBaseline='middle';
+      if(it.type==='commit'){ctx.font='800 '+Math.round(it.r*0.8)+'px Syne, monospace';ctx.fillText('</>',0,1)}
+      else{ctx.font=Math.round(it.r*1.1)+'px sans-serif';ctx.fillText(it.type==='bug'?'\uD83D\uDC1E':'\u2601\uFE0F',0,2)}
+      ctx.restore();
+    });
+
+    // particles
+    particles&&particles.forEach(function(p){
+      ctx.globalAlpha=Math.max(0,1-p.t/p.life);
+      ctx.fillStyle=p.c;ctx.fillRect(p.x-3,p.y-3,6,6);
+    });
+    ctx.globalAlpha=1;
+
+    // player
+    if(px!==undefined){
+      var w=pw(),h=ph(),x=px-w/2,y=H-h-10;
+      ctx.fillStyle=ink;rr(x+4,y+4,w,h,10);ctx.fill();
+      ctx.fillStyle=mint;ctx.strokeStyle=ink;ctx.lineWidth=3;rr(x,y,w,h,10);ctx.fill();ctx.stroke();
+      ctx.fillStyle='#1c1b3a';ctx.font='800 '+Math.round(h*0.4)+'px Syne, "Trebuchet MS", sans-serif';
+      ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText('Amplify',px,y+h/2+1);
+    }
+    ctx.restore();
+
+    // overlays
+    if(state==='idle'||state==='over'||state==='paused'){
+      ctx.fillStyle='rgba(23,22,54,.62)';ctx.fillRect(0,0,W,H);
+      var big=Math.max(26,Math.min(54,W*0.07)),small=Math.max(14,Math.min(20,W*0.026));
+      if(state==='idle'){
+        centerText('Ship It!',H/2-big*0.6,big,yellow);
+        centerText('Press Start game to begin',H/2+big*0.5,small,'#fff');
+      }else if(state==='paused'){
+        centerText('Paused',H/2-big*0.3,big,yellow);
+        centerText('Press Resume to continue',H/2+big*0.6,small,'#fff');
+      }else{
+        centerText('Build failed',H/2-big*1.1,big,pink);
+        centerText('Score '+score+'  \u2022  '+rank(score),H/2,small*1.4,'#fff');
+        centerText('Press Play again to retry',H/2+big*0.9,small,'#fff');
+      }
+    }
+  }
+
+  function loop(t){
+    if(state!=='running')return;
+    var dt=Math.min(0.05,(t-last)/1000);last=t;
+    update(dt);
+    if(state==='running'){draw();requestAnimationFrame(loop)}
+  }
+
+  // input
+  function setFromPointer(e){
+    var r=cv.getBoundingClientRect();
+    targetX=(e.clientX-r.left)/r.width*W;
+    var half=pw()/2;targetX=Math.min(Math.max(targetX,half),W-half);
+    if(state!=='running'){px=targetX;draw()}
+  }
+  cv.addEventListener('pointermove',setFromPointer);
+  cv.addEventListener('pointerdown',function(e){setFromPointer(e);cv.focus({preventScroll:true})});
+  window.addEventListener('keydown',function(e){
+    var k=e.key;
+    var isL=k==='ArrowLeft'||k==='a'||k==='A',isR=k==='ArrowRight'||k==='d'||k==='D';
+    if((isL||isR)&&state==='running'){keys[isL?'left':'right']=true;e.preventDefault()}
+    else if((k===' '||k==='p'||k==='P')&&document.activeElement===cv){
+      e.preventDefault();
+      if(state==='running'||state==='paused')togglePause();else start();
+    }
+  });
+  window.addEventListener('keyup',function(e){
+    var k=e.key;
+    if(k==='ArrowLeft'||k==='a'||k==='A')keys.left=false;
+    if(k==='ArrowRight'||k==='d'||k==='D')keys.right=false;
+  });
+  cv.addEventListener('blur',function(){keys={}});
+  elStart.addEventListener('click',start);
+  elPause.addEventListener('click',togglePause);
+  document.addEventListener('visibilitychange',function(){if(document.hidden&&state==='running')togglePause()});
+  window.addEventListener('resize',resize);
+  if(window.ResizeObserver)new ResizeObserver(resize).observe(stage);
+  // redraw when theme changes
+  btn.addEventListener('click',function(){draw()});
+  resize();
+})();
+</script>
+</body>
+</html>

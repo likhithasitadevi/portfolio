@@ -1,8 +1,8 @@
 # 🚀 Likhitha Yelubandi — Personal Portfolio & Interactive Build Game
 
-A modern, responsive personal portfolio website built to showcase my technical skills, projects, and educational background as a third-year Computer Science and Engineering student. This project features interactive elements like a **Tech Superpower Skill Picker** and a custom browser minigame called **"Ship It!"**, deployed entirely on **AWS Amplify Hosting**[cite: 1].
+A modern, responsive personal portfolio website built to showcase my technical skills, projects, and educational background as a third-year Computer Science and Engineering student. This project features interactive elements like a **Tech Superpower Skill Picker** and a custom browser minigame called **"Ship It!"**, deployed entirely on **AWS Amplify Hosting**.
 
-Built for the **AWS Student Builder Challenge**[cite: 1].
+Built for the **AWS Student Builder Challenge**.
 
 ---
 
@@ -21,7 +21,7 @@ Built for the **AWS Student Builder Challenge**[cite: 1].
 
 * **Frontend:** HTML5, CSS3 (Custom Properties / Variables, Grid, Flexbox), Vanilla JavaScript (ES6+)
 * **Styling & Fonts:** Google Fonts (*Syne* & *DM Sans*)
-* **Deployment & Hosting:** AWS Amplify Hosting[cite: 1]
+* **Deployment & Hosting:** AWS Amplify Hosting
 * **Version Control:** Git & GitHub
 
 ---

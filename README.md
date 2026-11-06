@@ -42,7 +42,9 @@ This portfolio follows a simple, automated cloud-native deployment workflow usin
 ├── index.html        # Main single-file source code (HTML, CSS, and Client-side JS Game)
 └── README.md         # Project documentation
 
-👩‍💻 Author 
+---
+
+## 👩‍💻 Author 
 Likhitha Yelubandi
 Third-Year B.Tech Computer Science and Engineering Student
 GitHub: https://github.com/likhithasitadevi

@@ -1,44 +1,69 @@
-# 🚀 Likhitha Yelubandi — Personal Portfolio & Interactive Build Game
+# Developer Portfolio & Interactive Build Game
 
-A modern, responsive personal portfolio website built to showcase my technical skills, projects, and educational background as a third-year Computer Science and Engineering student. This project features interactive elements like a **Tech Superpower Skill Picker** and a custom browser minigame called **"Ship It!"**, deployed entirely on **AWS Amplify Hosting**.
+A lightweight, responsive developer portfolio that showcases my projects, my skills and how the site is deployed. It is built with plain HTML, CSS and JavaScript (no frameworks), includes an HTML5 Canvas mini game, and is deployed automatically with **AWS Amplify Hosting**.
 
-Built for the **AWS Student Builder Challenge**.
-
----
-
-## ✨ Key Features
-
-* **About Me Section:** Background on my CSE studies, placement preparation, and technical focus areas.
-* **Interactive Skill Superpower Picker:** Click any skill (Python, JavaScript, React, REST APIs, AI APIs, AWS) to instantly highlight matching projects or view upcoming learning milestones.
-* **Featured Projects Showcase:** Highlights full-stack apps, AI-powered tools (like a resume scanner and skill gap roadmap generator), and dashboards with live links and GitHub repositories.
-* **"Ship It!" Minigame:** An interactive HTML5 canvas game where you control the Amplify build server to catch commits and clouds while dodging bugs.
-* **Architecture Diagram:** Interactive visual breakdown of the deployment pipeline from local development to cloud hosting.
-* **Dark / Light Mode Toggle:** Seamless theme switching with state persistence via `localStorage`.
+Built for the **AWS Student Builder Challenge: Build Your Tech Superpower**.
 
 ---
 
-## 🛠️ Tech Stack
+## Live Demo & Source Code
 
-* **Frontend:** HTML5, CSS3 (Custom Properties / Variables, Grid, Flexbox), Vanilla JavaScript (ES6+)
-* **Styling & Fonts:** Google Fonts (*Syne* & *DM Sans*)
-* **Deployment & Hosting:** AWS Amplify Hosting
-* **Version Control:** Git & GitHub
+- **Live Demo:** https://main.d31zwpsvuvb437.amplifyapp.com
+- **GitHub Repository:** https://github.com/likhithasitadevi/portfolio
 
 ---
 
-## ☁️ Deployment Architecture
+## Key Features
 
-This portfolio follows a simple, automated cloud-native deployment workflow using **AWS Amplify Hosting**:
-
-1. **Development:** Code changes are written locally and pushed to this **GitHub** repository[cite: 1].
-2. **CI/CD:** **AWS Amplify Hosting** automatically detects the repository push, builds the static asset, and provisions it globally over HTTPS[cite: 1].
-3. **Delivery:** Visitors access the live, high-performance web app via the secure Amplify public URL[cite: 1].
+- **Skill Picker:** Click a skill chip and the projects that use it are highlighted while the rest fade. Skills without a project yet are marked as "next on my list".
+- **"Ship It!" Canvas Game (creative feature):** You play the Amplify build server. Catch commits (+10) and clouds (+30), dodge bugs (lose a life), and level up as the game speeds up. It works with mouse, touch and keyboard, saves your best score in `localStorage`, and ends with a rank from Intern to Deploy Legend.
+- **Deployment Diagram:** An SVG diagram showing how this site goes from my laptop to GitHub to AWS Amplify Hosting to the visitor.
+- **Light / Dark Theme:** A toggle built on CSS custom properties that remembers your choice and respects your system setting.
+- **Responsive and Accessible:** Works from phone to desktop, with keyboard focus styles, ARIA labels and reduced-motion support.
 
 ---
 
-## 📂 Project Structure
+## Tech Stack
+
+- **Frontend:** HTML5, CSS (custom properties, Flexbox, Grid), vanilla JavaScript (ES6)
+- **Game:** HTML5 Canvas API, `requestAnimationFrame`, high-DPI scaling with `devicePixelRatio`
+- **Hosting:** AWS Amplify Hosting
+- **Version Control:** Git and GitHub
+
+---
+
+## Deployment on AWS
+
+1. **Push:** I commit my code and push it to the `main` branch on GitHub.
+2. **Build and deploy:** AWS Amplify Hosting detects the push, builds the site and publishes it automatically.
+3. **Serve:** The site is delivered over HTTPS at a public Amplify URL, with no servers for me to manage.
+
+**AWS service used:** AWS Amplify Hosting
+
+---
+
+## Repository Structure
 
 ```text
-├── index.html        # Main single-file source code (HTML, CSS, and Client-side JS Game)
-└── README.md         # Project documentation
+├── index.html   # Single-file site: HTML structure, CSS and the JavaScript (skill picker, theme, game)
+└── README.md    # Project documentation
+```
 
+---
+
+## Lessons Learned
+
+- Connecting a GitHub repository to Amplify so every push redeploys the site.
+- Building a game loop with Canvas and making it work with mouse, touch and keyboard.
+- Designing one layout that works well on both phones and large screens.
+
+---
+
+## Author
+
+**Likhitha Yelubandi**
+
+Third-year Computer Science Engineering student, building web apps and AI tools.
+
+- GitHub: https://github.com/likhithasitadevi
+- LinkedIn: https://www.linkedin.com/in/likhitha-yelubandi-698759374/
